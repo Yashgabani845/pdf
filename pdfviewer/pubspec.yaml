@@ -19,7 +19,6 @@ dependencies:
   firebase_core: ^3.3.0
   firebase_auth: ^5.1.4
   shared_preferences: ^2.0.17 # or the latest version
-
   cloud_firestore: ^5.2.0
   firebase_storage: ^12.3.0
   gallery_picker: ^0.5.1
@@ -35,5 +34,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/sub_assets/
+    - assets/sub_assets/pdf.png
     - assets/sub_assets/book1.pdf

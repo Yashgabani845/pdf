@@ -57,8 +57,7 @@ class FavoritesPage extends StatelessWidget {
                     return Container();
                   }
 
-                  final String title = book['title'] ?? 'Unknown Title';
-                  final String authorName = (book['authorDetails']?['authorName']) ?? 'Unknown Author';
+                  final String title = book['title'] ?? 'No Title';
                   final String pdfUrl = book['pdfUrl'] ?? '';
                   final String bookId = favoriteBooks[index].id;
 
@@ -103,10 +102,7 @@ class FavoritesPage extends StatelessWidget {
                             style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center,
                           ),
-                          Text(
-                            authorName,
-                            style: TextStyle(color: Colors.white70, fontSize: 14),
-                          ),
+
                           SizedBox(height: 10),
                           ElevatedButton(
                             onPressed: () async {

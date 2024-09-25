@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_application_1/Services/auth_service.dart';
-import 'package:flutter_application_1/screens/loginPage.dart';
+import 'package:flutter_application_1/Pages/loginPage.dart';
 import '../Models/User.dart';
 import '../Services/userServices.dart';
 import 'home_screen.dart';
@@ -17,11 +17,11 @@ class _SignupPageState extends State<SignupPage> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _confirmPasswordController = TextEditingController();
   final TextEditingController _userNameController = TextEditingController();
-  final TextEditingController _dobController = TextEditingController(); // DOB Controller
+  final TextEditingController _dobController = TextEditingController();
 
-  String? _selectedGender; // Gender Selection
-  bool _obscurePassword = true; // Password visibility toggle
-  bool _obscureConfirmPassword = true; // Confirm Password visibility toggle
+  String? _selectedGender;
+  bool _obscurePassword = true;
+  bool _obscureConfirmPassword = true;
 
   void register(BuildContext context) async {
     final auth = AuthService();
@@ -87,7 +87,7 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black, // Set the background color to black
+      backgroundColor: Colors.black,
       body: LayoutBuilder(
         builder: (context, constraints) {
           return SingleChildScrollView(
@@ -98,7 +98,7 @@ class _SignupPageState extends State<SignupPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Card(
-                      color: Colors.grey[850], // Dark background for the card
+                      color: Colors.grey[850],
                       elevation: 12.0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30.0), // Increased border radius
@@ -122,7 +122,7 @@ class _SignupPageState extends State<SignupPage> {
                               style: TextStyle(
                                 fontSize: 22.0,
                                 fontWeight: FontWeight.w500,
-                                color: Colors.white70, // Light text for description
+                                color: Colors.white70,
                               ),
                             ),
                             SizedBox(height: 25),
@@ -199,7 +199,6 @@ class _SignupPageState extends State<SignupPage> {
                                   ),
                                   SizedBox(height: 16),
 
-                                  // Confirm Password Field
                                   TextFormField(
                                     controller: _confirmPasswordController,
                                     style: TextStyle(color: Colors.white),

@@ -6,10 +6,8 @@ import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
 class PDFViewerPage extends StatefulWidget {
-  final String pdfPath; // This will be a network URL if from Firebase
-
+  final String pdfPath;
   const PDFViewerPage({required this.pdfPath});
-
   @override
   _PDFViewerPageState createState() => _PDFViewerPageState();
 }
@@ -21,15 +19,12 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
   @override
   void initState() {
     super.initState();
-    // Load PDF from the network or assets
     if (widget.pdfPath.startsWith('http')) {
       _downloadAndSavePdf(widget.pdfPath);
     } else {
       _loadPdfFromAssets();
     }
   }
-
-  // Method to download PDF from Firebase (network URL)
   Future<void> _downloadAndSavePdf(String url) async {
     try {
       final response = await http.get(Uri.parse(url));
@@ -50,8 +45,6 @@ class _PDFViewerPageState extends State<PDFViewerPage> {
       });
     }
   }
-
-  // Load PDFs from local assets (for local files)
   Future<void> _loadPdfFromAssets() async {
     try {
       final byteData = await rootBundle.load(widget.pdfPath);

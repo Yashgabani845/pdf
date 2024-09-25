@@ -25,13 +25,8 @@ Future<void> updateUser(UserModel user) async {
 
 Future<String?> uploadProfileImage(String uid, File image) async {
   try {
-    // Create a reference to the location where the profile image will be stored
     Reference ref = FirebaseStorage.instance.ref().child('profile_images').child('$uid.jpg');
-
-    // Upload the file to Firebase Storage
     UploadTask uploadTask = ref.putFile(image);
-
-    // Get the download URL
     TaskSnapshot snapshot = await uploadTask;
     return await snapshot.ref.getDownloadURL();
   } catch (e) {

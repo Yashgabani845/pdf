@@ -84,20 +84,16 @@ class _UserProfilePageState extends State<UserProfilePage> {
         userModel.name = _nameController.text;
         userModel.gender = _selectedGender;
         userModel.dob = _dobController.text;
-
         await updateUser(userModel);
-
         setState(() {
           _isEditing = false;
         });
-
         _fetchUserData();
       }
     } catch (e) {
       // Handle errors here
     }
   }
-
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
       context: context,

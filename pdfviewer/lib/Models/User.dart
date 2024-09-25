@@ -5,8 +5,7 @@ class UserModel {
   String password;
   String dob;
   String? gender;
-  String? profileImageUrl; // New field for profile image URL
-
+  String? profileImageUrl;
   UserModel({
     required this.uid,
     required this.name,
@@ -25,11 +24,9 @@ class UserModel {
       'password': password,
       'dob': dob,
       'gender': gender,
-      'profileImageUrl': profileImageUrl, // Include the profile image URL in the map
+      'profileImageUrl': profileImageUrl,
     };
   }
-
-  // Convert a Map to a User object
   factory UserModel.fromMap(Map<String, dynamic> map, String id) {
     return UserModel(
       uid: id,
@@ -38,7 +35,7 @@ class UserModel {
       password: map['password'],
       dob: map['dob'],
       gender: map['gender'],
-      profileImageUrl: map['profileImageUrl'], // Fetch the profile image URL
+      profileImageUrl: map['profileImageUrl'],
     );
   }
 }
