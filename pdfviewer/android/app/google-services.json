@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "371202474308",
+    "project_id": "ebookreader-609ce",
+    "storage_bucket": "ebookreader-609ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371202474308:android:cc46fd23b7c91695399711",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYrpA1wHnTVV-b63dADHatDp-pIftVRF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
